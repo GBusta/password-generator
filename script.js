@@ -66,6 +66,7 @@ var confirmSpecialChar = confirm("Do you want your password to include 'SPECIAL'
             passowrdDisplay = passowrdDisplay + displayArray[rng];
         }
 
+        //
         if (confirmLower === false && confirmUpper === false && confirmNum === false && confirmSpecialChar === false) {
             return "Please select at least one character type.";
         };
