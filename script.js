@@ -31,30 +31,45 @@ charLength = prompt("How many characters would you want your password to be betw
 var confirmLower = confirm("Do you want your password to include 'lowercase' character letters click 'OK' if yes or 'Cancel' if no.")
     if (confirmLower) {
     displayArray = displayArray.concat(randomLower);
+
+    } else {
+        alert("Your password will not have 'lowercase' characters")
     }
 
 // prompt: Uppercase
 var confirmUpper = confirm("Do you want your password to include 'UPPERCASE' character letters click 'OK' if yes or 'Cancel' if no.")
     if (confirmUpper) {
         displayArray = displayArray.concat(randomUpper);
+    } else {
+        alert("Your password will not have 'UPPERCASE' characters")
     }
 
 // prompt: Numbers
-var confirmNum = confirm("Do you want your password to include 'NUMBER' character letters click 'OK' if yes or 'Cancel' if no.")
+var confirmNum = confirm("Do you want your password to include 'NUMBER' characters click 'OK' if yes or 'Cancel' if no.")
     if (confirmNum) {
         displayArray = displayArray.concat(randomNum);
+    } else {
+        alert("Your password will not have Numbers")
     }
+
 // prompt: Special Characters
 var confirmSpecialChar = confirm("Do you want your password to include 'SPECIAL' characters click 'OK' if yes or 'Cancel' if no.")
     if (confirmSpecialChar) {
         displayArray = displayArray.concat(randomSpecialChar);
-    } 
+    } else {
+        alert("Your password will not have 'SPECIAL' characters.")
+    }
     
     let passowrdDisplay = ""
         for (let i = 0; i < charLength; i++) {
             let rng = [Math.floor(Math.random() * displayArray.length)];
             passowrdDisplay = passowrdDisplay + displayArray[rng];
         }
+
+        if (confirmLower === false && confirmUpper === false && confirmNum === false && confirmSpecialChar === false) {
+            return "Please select at least one character type.";
+        };
+
         return passowrdDisplay;
 };
 
