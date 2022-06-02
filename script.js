@@ -1,20 +1,15 @@
-var displayArray = [];
+//Generate Funcion
+function generatePassword() {
 
-var randomPasswordArray = [];
+var displayPassword = [];
 
 var randomLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-
 var randomUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-
-
 
 var randomNum = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-var randomSpecialChar = ["!","@","#","$","%","^","&","*","(",")","{","}","[","]","=","<",">","/",",","."]
-
-//Generate Funcion
-function generatePassword() {
+var randomSpecialChar = ["!","@","#","$","%","^","&","*","(",")","{","}","[","]","=","<",">","/",",","."];
 
     //Length of passwtord
 charLength = prompt("How many characters would you want your password to be between 8-128");
@@ -28,42 +23,45 @@ charLength = prompt("How many characters would you want your password to be betw
     }
 
 //prompt: Lowercase
-var confirmLower = confirm("Do you want your password to include 'lowercase' character letters click 'OK' if yes or 'Cancel' if no.")
+confirmLower = confirm("Do you want your password to include 'lowercase' character letters click 'OK' if yes or 'Cancel' if no.")
     if (confirmLower) {
-    displayArray = displayArray.concat(randomLower);
+        alert("Your password will include 'lowercase' characters")
+    displayPassword = displayPassword.concat(randomLower);
 
     } else {
-        alert("Your password will not have 'lowercase' characters")
+        alert("Your password will not include 'lowercase' characters")
     }
 
 // prompt: Uppercase
-var confirmUpper = confirm("Do you want your password to include 'UPPERCASE' character letters click 'OK' if yes or 'Cancel' if no.")
+confirmUpper = confirm("Do you want your password to include 'UPPERCASE' character letters click 'OK' if yes or 'Cancel' if no.")
     if (confirmUpper) {
-        displayArray = displayArray.concat(randomUpper);
+        alert("Your password will include 'UPPERCASE' characters")
+        displayPassword = displayPassword.concat(randomUpper);
     } else {
-        alert("Your password will not have 'UPPERCASE' characters")
+        alert("Your password will not include 'UPPERCASE' characters")
     }
 
 // prompt: Numbers
-var confirmNum = confirm("Do you want your password to include 'NUMBER' characters click 'OK' if yes or 'Cancel' if no.")
+confirmNum = confirm("Do you want your password to include 'NUMBER' characters click 'OK' if yes or 'Cancel' if no.")
     if (confirmNum) {
-        displayArray = displayArray.concat(randomNum);
+        alert("Your password will include numbers.")
+        displayPassword = displayPassword.concat(randomNum);
     } else {
-        alert("Your password will not have Numbers")
+        alert("Your password will not include Numbers")
     }
 
 // prompt: Special Characters
-var confirmSpecialChar = confirm("Do you want your password to include 'SPECIAL' characters click 'OK' if yes or 'Cancel' if no.")
+confirmSpecialChar = confirm("Do you want your password to include 'SPECIAL' characters click 'OK' if yes or 'Cancel' if no.")
     if (confirmSpecialChar) {
-        displayArray = displayArray.concat(randomSpecialChar);
+        displayPassword = displayPassword.concat(randomSpecialChar);
     } else {
-        alert("Your password will not have 'SPECIAL' characters.")
+        alert("Your password will not include 'SPECIAL' characters.")
     }
     
     let passowrdDisplay = ""
         for (let i = 0; i < charLength; i++) {
-            let rng = [Math.floor(Math.random() * displayArray.length)];
-            passowrdDisplay = passowrdDisplay + displayArray[rng];
+            let rng = [Math.floor(Math.random() * displayPassword.length)];
+            passowrdDisplay = passowrdDisplay + displayPassword[rng];
         }
 
         //
