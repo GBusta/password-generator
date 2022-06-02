@@ -26,7 +26,7 @@ charLength = prompt("How many characters would you want your password to be betw
 confirmLower = confirm("Do you want your password to include 'lowercase' character letters click 'OK' if yes or 'Cancel' if no.")
     if (confirmLower) {
         alert("Your password will include 'lowercase' characters")
-    displayPassword = displayPassword.concat(randomLower);
+        displayPassword = displayPassword.concat(randomLower);
 
     } else {
         alert("Your password will not include 'lowercase' characters")
@@ -35,7 +35,7 @@ confirmLower = confirm("Do you want your password to include 'lowercase' charact
 // prompt: Uppercase
 confirmUpper = confirm("Do you want your password to include 'UPPERCASE' character letters click 'OK' if yes or 'Cancel' if no.")
     if (confirmUpper) {
-        alert("Your password will include 'UPPERCASE' characters")
+        alert("Your password will ingitclude 'UPPERCASE' characters")
         displayPassword = displayPassword.concat(randomUpper);
     } else {
         alert("Your password will not include 'UPPERCASE' characters")
@@ -54,6 +54,7 @@ confirmNum = confirm("Do you want your password to include 'NUMBER' characters c
 confirmSpecialChar = confirm("Do you want your password to include 'SPECIAL' characters click 'OK' if yes or 'Cancel' if no.")
     if (confirmSpecialChar) {
         displayPassword = displayPassword.concat(randomSpecialChar);
+        alert("Your password will include 'SPECIAL' characters.")
     } else {
         alert("Your password will not include 'SPECIAL' characters.")
     }
@@ -82,8 +83,7 @@ function writePassword() {
     var passwordText = document.querySelector("#password");
 
     passwordText.value = password;
-
-}
+};
 
 //Add event listener to generate button
 generateBtn.addEventListener("click", writePassword)
