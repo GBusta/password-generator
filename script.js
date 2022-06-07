@@ -12,37 +12,37 @@ const randomSpecialChar = ["!","@","#","$","%","^","&","*","(",")","{","}","[","
 function generatePassword() {
 
     //Length of passwtord
-charLength = prompt("How many characters would you want your password to be between 8-128");
+charLength = prompt("How many characters would you want your password to be between 8-128?");
     if (charLength < 8 || charLength > 128) {
-    return alert("Please enter a valid length");
+    return ("Please enter a valid length.");
     } else if (isNaN(charLength)) {
-        return "Please enter a valid number";
+        return "Please enter a valid number.";
     }
     else {
         alert("Your password will be " + charLength + " characters long.");
     }
 
 //prompt: Lowercase
-confirmLower = confirm("Do you want your password to include 'lowercase' character letters click 'OK' if yes or 'Cancel' if no.")
+confirmLower = confirm("Do you want your password to include 'lowercase' letters? Click 'OK' if yes or 'Cancel' if no.")
     if (confirmLower) {
-        alert("Your password will include 'lowercase' characters");
+        alert("Your password will include 'lowercase' characters.");
         displayPassword = displayPassword.concat(randomLower);
 
     } else {
-        alert("Your password will not include 'lowercase' characters");
+        alert("Your password will not include 'lowercase' characters.");
     }
 
 // prompt: Uppercase
 confirmUpper = confirm("Do you want your password to include 'UPPERCASE' character letters click 'OK' if yes or 'Cancel' if no.")
     if (confirmUpper) {
-        alert("Your password will ingitclude 'UPPERCASE' characters");
+        alert("Your password will include 'UPPERCASE' characters.");
         displayPassword = displayPassword.concat(randomUpper);
     } else {
-        alert("Your password will not include 'UPPERCASE' characters");
+        alert("Your password will not include 'UPPERCASE' characters.");
     }
 
 // prompt: Numbers
-confirmNum = confirm("Do you want your password to include 'NUMBER' characters click 'OK' if yes or 'Cancel' if no.")
+confirmNum = confirm("Do you want your password to include 'NUMBER' characters? Click 'OK' if yes or 'Cancel' if no.")
     if (confirmNum) {
         alert("Your password will include numbers.");
         displayPassword = displayPassword.concat(randomNum);
@@ -51,7 +51,7 @@ confirmNum = confirm("Do you want your password to include 'NUMBER' characters c
     }
 
 // prompt: Special Characters
-confirmSpecialChar = confirm("Do you want your password to include 'SPECIAL' characters click 'OK' if yes or 'Cancel' if no.")
+confirmSpecialChar = confirm("Do you want your password to include 'SPECIAL' characters? Click 'OK' if yes or 'Cancel' if no.")
     if (confirmSpecialChar) {
         displayPassword = displayPassword.concat(randomSpecialChar);
         alert("Your password will include 'SPECIAL' characters.");
