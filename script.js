@@ -1,62 +1,62 @@
 //Generate Funcion
-function generatePassword() {
-
 var displayPassword = [];
 
-var randomLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+const randomLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-var randomUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+const randomUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-var randomNum = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const randomNum = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-var randomSpecialChar = ["!","@","#","$","%","^","&","*","(",")","{","}","[","]","=","<",">","/",",","."];
+const randomSpecialChar = ["!","@","#","$","%","^","&","*","(",")","{","}","[","]","=","<",">","/",",","."];
+
+function generatePassword() {
 
     //Length of passwtord
 charLength = prompt("How many characters would you want your password to be between 8-128");
     if (charLength < 8 || charLength > 128) {
     return alert("Please enter a valid length");
     } else if (isNaN(charLength)) {
-        charLength = alert("Please enter a valid number");
+        return "Please enter a valid number";
     }
     else {
-        alert("Your password will be " + charLength + " characters long.")
+        alert("Your password will be " + charLength + " characters long.");
     }
 
 //prompt: Lowercase
 confirmLower = confirm("Do you want your password to include 'lowercase' character letters click 'OK' if yes or 'Cancel' if no.")
     if (confirmLower) {
-        alert("Your password will include 'lowercase' characters")
+        alert("Your password will include 'lowercase' characters");
         displayPassword = displayPassword.concat(randomLower);
 
     } else {
-        alert("Your password will not include 'lowercase' characters")
+        alert("Your password will not include 'lowercase' characters");
     }
 
 // prompt: Uppercase
 confirmUpper = confirm("Do you want your password to include 'UPPERCASE' character letters click 'OK' if yes or 'Cancel' if no.")
     if (confirmUpper) {
-        alert("Your password will ingitclude 'UPPERCASE' characters")
+        alert("Your password will ingitclude 'UPPERCASE' characters");
         displayPassword = displayPassword.concat(randomUpper);
     } else {
-        alert("Your password will not include 'UPPERCASE' characters")
+        alert("Your password will not include 'UPPERCASE' characters");
     }
 
 // prompt: Numbers
 confirmNum = confirm("Do you want your password to include 'NUMBER' characters click 'OK' if yes or 'Cancel' if no.")
     if (confirmNum) {
-        alert("Your password will include numbers.")
+        alert("Your password will include numbers.");
         displayPassword = displayPassword.concat(randomNum);
     } else {
-        alert("Your password will not include Numbers")
+        alert("Your password will not include Numbers");
     }
 
 // prompt: Special Characters
 confirmSpecialChar = confirm("Do you want your password to include 'SPECIAL' characters click 'OK' if yes or 'Cancel' if no.")
     if (confirmSpecialChar) {
         displayPassword = displayPassword.concat(randomSpecialChar);
-        alert("Your password will include 'SPECIAL' characters.")
+        alert("Your password will include 'SPECIAL' characters.");
     } else {
-        alert("Your password will not include 'SPECIAL' characters.")
+        alert("Your password will not include 'SPECIAL' characters.");
     }
     
     let passowrdDisplay = ""
@@ -86,4 +86,4 @@ function writePassword() {
 };
 
 //Add event listener to generate button
-generateBtn.addEventListener("click", writePassword)
+generateBtn.addEventListener("click", writePassword);
