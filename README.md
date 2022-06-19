@@ -1,5 +1,11 @@
 # password-generator
 
+## Deployable URL link 
+<a href="https://gbusta.github.io/password-generator/">gbusta.github.io/password-generator/</a>
+
+## Github Repo Link
+
+
 ## Purpose
 
 Generates random password and gives the user a choice to include or not include one or more of the following characters:
