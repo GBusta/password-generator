@@ -4,7 +4,7 @@
 <a href="https://gbusta.github.io/password-generator/">gbusta.github.io/password-generator/</a>
 
 ## Github Repo Link
-
+<a href="https://github.com/GBusta/password-generator">https://github.com/GBusta/password-generator</a>
 
 ## Purpose
 
