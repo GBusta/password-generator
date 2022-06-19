@@ -14,9 +14,9 @@ function generatePassword() {
     //Length of passwtord
 charLength = prompt("How many characters would you want your password to be between 8-128?");
     if (charLength < 8 || charLength > 128) {
-    return ("Please enter a valid length.");
+    return alert("Please enter a valid length.");
     } else if (isNaN(charLength)) {
-        return "Please enter a valid number.";
+        return alert("Please enter a valid number.");
     }
     else {
         alert("Your password will be " + charLength + " characters long.");
