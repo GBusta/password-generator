@@ -1,17 +1,18 @@
-//Generate Funcion
-var displayPassword = [];
+//Generate Function
 
-const randomLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-
-const randomUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-
-const randomNum = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-
-const randomSpecialChar = ["!","@","#","$","%","^","&","*","(",")","{","}","[","]","=","<",">","/",",","."];
 
 function generatePassword() {
 
     //Length of passwtord
+var displayPassword = [];
+
+var randomLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+var randomUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+var randomNum = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+var randomSpecialChar = ["!","@","#","$","%","^","&","*","(",")","{","}","[","]","=","<",">","/",",","."];
 charLength = prompt("How many characters would you want your password to be between 8-128?");
     if (charLength < 8 || charLength > 128) {
     return alert("Please enter a valid length.");
@@ -67,7 +68,7 @@ confirmSpecialChar = confirm("Do you want your password to include 'SPECIAL' cha
 
         //
         if (confirmLower === false && confirmUpper === false && confirmNum === false && confirmSpecialChar === false) {
-            return "Please select at least one character type.";
+            return alert("Please select at least one character type.");
         };
 
         return passowrdDisplay;
